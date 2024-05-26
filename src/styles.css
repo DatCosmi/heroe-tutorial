@@ -24,10 +24,19 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+form {
+  margin-top: 2vw;
+}
+
 .title {
   font-weight: 600;
-  font-size: 5vw;
+  font-size: 1.3vw;
   text-align: center;
+  color: rgb(221, 49, 92);
+}
+
+.form-btn {
+  background-color: rgb(221, 49, 92);
 }
 
 /* Top Tab */
