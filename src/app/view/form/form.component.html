@@ -1,45 +1,60 @@
-<mat-card>
-  <mat-card-header>Formulario</mat-card-header>
-  <div>
-    <form [formGroup]="formGroup" >
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Nombre</mat-label>
-          <input matInput id="name" formControlName="name" />
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Correo Electrónico</mat-label>
-          <input matInput id="email" formControlName="email" />
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Contraseña</mat-label>
-          <input
-            matInput
-            id="password"
-            formControlName="password"
-            type="password"
-          />
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Teléfono</mat-label>
-          <input matInput id="phone" formControlName="phone" />
-        </mat-form-field>
-      </div>
+<div class="div-form">
+  <h1 class="title">Formulario</h1>
+  <form [formGroup]="formGroup">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input
+          placeholder="Placeholder"
+          matInput
+          id="name"
+          formControlName="name"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Correo Electrónico</mat-label>
+        <input
+          placeholder="Placeholder"
+          matInput
+          id="email"
+          formControlName="email"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input
+          placeholder="Placeholder"
+          matInput
+          id="password"
+          formControlName="password"
+          type="password"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Teléfono</mat-label>
+        <input
+          placeholder="Placeholder"
+          matInput
+          id="phone"
+          formControlName="phone"
+        />
+      </mat-form-field>
+    </div>
 
-      <button
-        mat-raised-button
-        color="primary"
-        [disabled]="formGroup.invalid"
-        (click)="submit()"
-      >
-        Enviar
-      </button>
-    </form>
-  </div>
-</mat-card>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="formGroup.invalid"
+      (click)="submit()"
+      type="button"
+    >
+      Enviar
+    </button>
+  </form>
+</div>

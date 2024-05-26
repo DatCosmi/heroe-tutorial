@@ -1,6 +1,9 @@
-<mat-chip-set aria-label="Fish selection">
-  <mat-chip> <a routerLink="/dashboard">Home</a></mat-chip>
-  <mat-chip><a routerLink="/table">Tablas</a></mat-chip>
-  <mat-chip> <a routerLink="/form">Formulario</a></mat-chip>
-</mat-chip-set>
+<div class="top-tab" aria-label="Fish selection">
+  <div class="home-btn">
+    <mat-icon aria-hidden="false" fontIcon="school"></mat-icon>
+    <a class="home-btn-text" routerLink="/dashboard">HeroeTutorial</a>
+  </div>
+  <a class="mat-chip" routerLink="/table">Tablas</a>
+  <a class="mat-chip" routerLink="/form">Formulario</a>
+</div>
 <router-outlet></router-outlet>
