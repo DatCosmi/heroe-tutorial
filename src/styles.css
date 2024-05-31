@@ -41,6 +41,7 @@ body {
   background-color: rgb(255, 187, 204);
   padding: 0.3vw 0vw;
   align-items: center;
+  z-index: 5;
 }
 
 .mat-chip {
@@ -48,7 +49,7 @@ body {
   color: rgb(218, 12, 64);
   padding: 0.5vw 0.7vw;
   border-radius: 2vw;
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   text-decoration: none;
   font-weight: 500;
   margin: 0;
@@ -66,7 +67,7 @@ body {
   padding: 0.5vw 0.7vw;
   padding-right: 0.9vw;
   border-radius: 2vw;
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   text-decoration: none;
   font-weight: 600;
   margin-left: 1vw;
@@ -97,9 +98,23 @@ body {
 .table-div {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 1vw;
+  width: 97vw;
+  z-index: 0;
+}
+
+.tablita {
+  width: 100%;
 }
 
 .mat-header-cell {
   background-color: #3f51b5; /* Cambia este valor al color que desees */
   color: white; /* Opcional: cambiar el color del texto */
+}
+
+.active {
+  color: rgb(31, 205, 138);
+}
+
+.inactive {
+  color: rgb(205, 31, 43);
 }

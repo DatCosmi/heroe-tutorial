@@ -46,6 +46,15 @@
         />
       </mat-form-field>
     </div>
+    <div>
+      <mat-slide-toggle
+        id="status"
+        formControlName="status"
+        [checked]="this.formGroup.value.status"
+      >
+        <mat-label>Status</mat-label>
+      </mat-slide-toggle>
+    </div>
 
     <button
       mat-raised-button

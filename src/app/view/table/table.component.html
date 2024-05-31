@@ -1,6 +1,6 @@
 <h1 class="title">Tablita</h1>
 <div class="table-div">
-  <table class="tablita" mat-table [dataSource]="dataSource">
+  <table class="tablita" mat-table [dataSource]="data">
     <ng-container matColumnDef="id">
       <th class="table-header" mat-header-cell *matHeaderCellDef>ID</th>
       <td mat-cell *matCellDef="let element">{{ element.id }}</td>
@@ -16,8 +16,12 @@
     <ng-container matColumnDef="status">
       <th class="table-header" mat-header-cell *matHeaderCellDef>Status</th>
       <td mat-cell *matCellDef="let element">
-        <p *ngIf="element.status">Active</p>
-        <p *ngIf="!element.status">Inactive</p>
+        <p class="active" *ngIf="element.status">
+          <mat-icon aria-hidden="false" fontIcon="check_circle"></mat-icon>
+        </p>
+        <p class="inactive" *ngIf="!element.status">
+          <mat-icon aria-hidden="false" fontIcon="cancel"></mat-icon>
+        </p>
       </td>
     </ng-container>
 

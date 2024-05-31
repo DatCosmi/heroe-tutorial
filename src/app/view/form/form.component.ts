@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-form',
@@ -14,7 +15,7 @@ export class FormComponent implements OnInit {
 
   formGroup!: FormGroup;
 
-  constructor(private formB: FormBuilder) {}
+  constructor(private formB: FormBuilder, private userService: UserService) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -26,10 +27,11 @@ export class FormComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       phone: ['', [Validators.required, Validators.maxLength(10)]],
+      status: [false, Validators.required],
     });
   }
 
   submit() {
-    console.log(this.formGroup.value);
+    this.userService.addData(this.formGroup.value);
   }
 }
