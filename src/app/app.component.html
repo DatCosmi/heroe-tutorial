@@ -1,9 +1,15 @@
-<div class="top-tab" aria-label="Fish selection">
-  <div class="home-btn">
-    <mat-icon aria-hidden="false" fontIcon="school"></mat-icon>
-    <a class="home-btn-text" routerLink="/dashboard">HeroeTutorial</a>
+<div class="grid-container">
+  <div class="top-tab grid-item" aria-label="Fish selection">
+    <a class="home-btn" routerLink="/dashboard" routerLinkActive="active-link"
+      ><mat-icon aria-hidden="false" fontIcon="school"></mat-icon
+      >HeroeTutorial</a
+    >
+    <a class="mat-chip" routerLink="/table" routerLinkActive="active-link"
+      >Tablas</a
+    >
+    <a class="mat-chip" routerLink="/form" routerLinkActive="active-link"
+      >Formulario</a
+    >
   </div>
-  <a class="mat-chip" routerLink="/table">Tablas</a>
-  <a class="mat-chip" routerLink="/form">Formulario</a>
+  <router-outlet class="grid-item"></router-outlet>
 </div>
-<router-outlet></router-outlet>

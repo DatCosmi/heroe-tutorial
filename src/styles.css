@@ -39,18 +39,32 @@ form {
   background-color: rgb(221, 49, 92);
 }
 
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-template-rows: 2vh 1fr;
+}
+
+.grid-item {
+  box-sizing: border-box;
+}
+
 /* Top Tab */
 .top-tab {
-  position: absolute;
+  position: fixed;
   display: flex;
   margin: 0;
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgb(255, 187, 204);
-  padding: 0.3vw 0vw;
+  padding: 0.4rem 0vw;
   align-items: center;
   z-index: 5;
+}
+
+.active-link {
+  background-color: rgb(252, 174, 194);
 }
 
 .mat-chip {
@@ -58,7 +72,7 @@ form {
   color: rgb(218, 12, 64);
   padding: 0.5vw 0.7vw;
   border-radius: 2vw;
-  font-size: 0.9vw;
+  font-size: 1rem;
   text-decoration: none;
   font-weight: 500;
   margin: 0;
@@ -76,7 +90,7 @@ form {
   padding: 0.5vw 0.7vw;
   padding-right: 0.9vw;
   border-radius: 2vw;
-  font-size: 0.9vw;
+  font-size: 1.1rem;
   text-decoration: none;
   font-weight: 600;
   margin-left: 1vw;
@@ -89,12 +103,6 @@ form {
 
 .home-btn:hover {
   background-color: rgb(252, 174, 194);
-}
-
-.home-btn-text {
-  color: rgb(218, 12, 64);
-  font-size: 0.8vw;
-  text-decoration: none;
 }
 
 .home-icon {
